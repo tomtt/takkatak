@@ -81,6 +81,6 @@ end
 namespace :features do
   desc "Create html files of features"
   task :generate_feature_html_files, :roles => [:app] do
-    # run "#{current_path}/script/cucumber -f Cucumber::Formatter::HtmlFiles #{current_path}/features"
+    run "RAILS_ENV=test #{current_path}/script/cucumber -f Cucumber::Formatter::HtmlFiles #{current_path}/features"
   end
 end
